@@ -7,11 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var redLightView: UIView!
+    @IBOutlet weak var orangeLightView: UIView!
+    @IBOutlet weak var greenLightView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        redLightView.layer.cornerRadius = redLightView.bounds.width / 2
+        orangeLightView.layer.cornerRadius = redLightView.bounds.width / 2
+        greenLightView.layer.cornerRadius = redLightView.bounds.width / 2
     }
 
 
