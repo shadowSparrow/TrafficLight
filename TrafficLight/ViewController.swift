@@ -21,13 +21,16 @@ class ViewController: UIViewController {
         redLightView.alpha = 0.3
         orangeLightView.alpha = 0.3
         greenLightView.alpha = 0.3
+        startButton.setTitle("START", for: .normal)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
         redLightView.layer.cornerRadius = redLightView.bounds.width / 2
         orangeLightView.layer.cornerRadius = redLightView.bounds.width / 2
         greenLightView.layer.cornerRadius = redLightView.bounds.width / 2
     
-        startButton.setTitle("START", for: .normal)
-        
     }
     
     
@@ -53,10 +56,6 @@ class ViewController: UIViewController {
             }
             
         }
-        
-        
-        
-    
         
     }
     
