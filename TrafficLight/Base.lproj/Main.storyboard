@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -22,10 +22,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbv-LJ-IYt">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="StB-oY-tcW"/>
-                                            <constraint firstAttribute="height" constant="200" id="heY-vc-aLG"/>
-                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnQ-07-xIF">
                                         <rect key="frame" x="0.0" y="223" width="200" height="200"/>
@@ -43,11 +39,25 @@
                                     <constraint firstItem="wbv-LJ-IYt" firstAttribute="width" secondItem="UnQ-07-xIF" secondAttribute="width" id="ehN-mB-nX7"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-oO-dnN">
+                                <rect key="frame" x="107" y="739" width="200" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START"/>
+                                <connections>
+                                    <action selector="switchLightsAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9b-21-Sce"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="c26-6E-W7C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Yl-l2-5If"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vfe-oO-dnN" secondAttribute="trailing" constant="107" id="4iC-Tz-dI6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c26-6E-W7C" secondAttribute="bottom" constant="172" id="8ui-N3-thu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vfe-oO-dnN" secondAttribute="bottom" constant="65" id="LlQ-g6-HaI"/>
+                            <constraint firstItem="vfe-oO-dnN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="XoP-ou-BVN"/>
+                            <constraint firstItem="vfe-oO-dnN" firstAttribute="top" secondItem="c26-6E-W7C" secondAttribute="bottom" constant="49" id="ltc-Ir-9na"/>
                             <constraint firstItem="c26-6E-W7C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="mqg-IT-oye"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c26-6E-W7C" secondAttribute="trailing" constant="107" id="riw-um-27s"/>
                         </constraints>
@@ -56,11 +66,12 @@
                         <outlet property="greenLightView" destination="Jdf-yu-GUX" id="JoC-0q-lSg"/>
                         <outlet property="orangeLightView" destination="UnQ-07-xIF" id="feq-ho-kqh"/>
                         <outlet property="redLightView" destination="wbv-LJ-IYt" id="da7-yN-tEb"/>
+                        <outlet property="startButton" destination="vfe-oO-dnN" id="SSb-tf-iKD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
